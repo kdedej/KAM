@@ -34,7 +34,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    background-color: rgba(0, 0, 0, 0.7); /* Black with 50% opacity */
     z-index: 1; /* Ensure overlay is above background but below text */
 }
 
@@ -49,6 +49,19 @@ body::before {
 /* Style for the heading */
 .centered-text h1 {
     margin: 0;
-    font-size: 3em; /* Adjust font size as needed */
+    font-size: 5em; /* Adjust font size as needed */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional text shadow for readability */
+}
+
+/* Style for the first paragraph */
+.centered-text p:first-of-type {
+    font-size: 1.5em; /* Set font size to match the link */
+}
+
+/* Style for the link within the paragraph */
+.centered-text p a {
+    color: white; /* Match header color */
+    text-decoration: none; /* Remove default underline */
+    font-size: 1.6em; /* Smaller than h1 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Match header text shadow */
 }
