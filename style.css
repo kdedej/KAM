@@ -16,13 +16,13 @@ html, body {
 
 /* Default background image for larger screens (desktop) */
 body {
-    background-image: url('path/to/your/desktop-image.jpg');
+    background-image: url('/img/main.png');
 }
 
 /* Media query for smaller screens (mobile) - adjust max-width as needed */
 @media (max-width: 768px) {
     body {
-        background-image: url('path/to/your/mobile-image.jpg');
+        background-image: url('/img/mainphone.png');
     }
 }
 
