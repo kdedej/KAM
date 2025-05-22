@@ -1,0 +1,54 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevent scrollbars */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    /* Use flexbox to center content */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative; /* Needed for pseudo-element positioning */
+}
+
+/* Default background image for larger screens (desktop) */
+body {
+    background-image: url('path/to/your/desktop-image.jpg');
+}
+
+/* Media query for smaller screens (mobile) - adjust max-width as needed */
+@media (max-width: 768px) {
+    body {
+        background-image: url('path/to/your/mobile-image.jpg');
+    }
+}
+
+/* Pseudo-element for the dark overlay */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1; /* Ensure overlay is above background but below text */
+}
+
+/* Style for the centered text container */
+.centered-text {
+    text-align: center;
+    color: white; /* Text color */
+    z-index: 2; /* Ensure text is above the overlay */
+    position: relative; /* Needed to ensure z-index works correctly */
+}
+
+/* Style for the heading */
+.centered-text h1 {
+    margin: 0;
+    font-size: 3em; /* Adjust font size as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional text shadow for readability */
+}
